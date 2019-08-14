@@ -1,11 +1,11 @@
+console.log(React)
 function getMood(){
     const moods = [ 'Angry', 'Happy', 'Quiet', 'Upset'];
     return moods[Math.floor(Math.random()* moods.length)];
 }
 
-
-class JSXDemo extends RTCIceCandidate.Component {
-    render(){
+class JSXDemo extends React.Component {
+    render() {
         return (
             <div>
                 <h1>My image</h1>
