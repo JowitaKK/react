@@ -5,6 +5,7 @@ function getMood(){
 }
 
 class JSXDemo extends React.Component {
+    
     render() {
         return (
             <div>
