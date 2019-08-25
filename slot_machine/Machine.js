@@ -4,10 +4,18 @@ class Machine extends React.Component {
         const winner = (s1 === s2) && (s2 === s3);
 
         return (
-            <div>
+            <div className="Machine">
             <p> {s1} {s2} {s3}</p>
-            <p> {winner ? 'Winner!' : 'Loser'} </p>
+            <p className= {winner ? 'win' : 'lose'}> 
+            {winner ? 'Winner!' : 'Loser'}
+            </p>
             </div>
         );
     }
 }
+
+
+
+/*or css here 
+        <p style= {{ fontSize: '50px', backgroundColor:'purple'}}>
+        {s1} {s2} {s3}</p> */
