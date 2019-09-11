@@ -11,6 +11,7 @@ class Form extends Component {
     handleChange(evt) {
         this.setState({username: evt.target.value});
     }
+
     handleSubmit(evt){
         evt.preventDefault();
         alert(`You typed: ${this.state.username}`);

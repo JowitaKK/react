@@ -3,18 +3,13 @@ import React, { Component } from 'react'
 class MultipleForm extends Component {
     constructor(props){
         super(props);
-        this.state= { 
-            username: "", 
-            email: "", 
-            password: ""
-        };
-
+        this.state= { username: "", email: "", password: ""};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
 
       handleChange(evt) {
-          console.log(evt)
+          console.log(evt.target.name, evt.target.value)
           this.setState ({ [evt.target.name]: evt.target.value});
       }
 
