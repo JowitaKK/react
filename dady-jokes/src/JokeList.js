@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import Joke from './Joke';
-import axios from 'axios';
-import uuid from './uuid/v4';
-import './JokeList.css';
+import React, { Component } from "react";
+import Joke from "./Joke";
+import axios from "axios";
+import uuid from "uuid/v4";
+import "./JokeList.css";
 
 class JokeList extends Component {
-    static defaultPrps = {
-        numJokesGet: 10
+  static defaultProps = {
+    numJokesToGet: 10
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      jokes: JSON.parse(window.localStorage.getItem("jokes") || "[]"),
+      loading: false
     };
-    constructor(props) {
-        super(props);
-        this.state = {
-            jokes: JSON.parse(window.localStorage.getItem("jokes") || "[]"),
-            loading : false
-        };
-        this.seenJokes = new Set(this.state.jokes.map(j => j.text));
-        console.log(this.seenJokes);
-        this.handleClick = this.handelClick.gind(this);
-    }
-    componentDidMount(){
-        if (this.state.jokes.length === 0) this.getJokes();
-
-    }
-    async getJokes() {
+    this.seenJokes = new Set(this.state.jokes.map(j => j.text));
+    console.log(this.seenJokes);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  componentDidMount() {
+    if (this.state.jokes.length === 0) this.getJokes();
+  }
+  async getJokes() {
     try {
       let jokes = [];
       while (jokes.length < this.props.numJokesToGet) {
