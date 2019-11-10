@@ -29,7 +29,9 @@ class App extends Component {
         </nav>
       <Switch>
         <Route exact path='/' component = {About} />
-        <Route exact path='/dog' component = {Dog} />
+        <Route exact path='/dog' component = {() => <Dog name= 'Jac'/>} />
+        { /* or 
+        <Route exact path='/dog' render={() => <Dog name = 'Bicuits' />} /> */}
         <Route exact path='/dog/lover' component = {Lover} />
         <Route exact path='/contact' component = {Contact} />
       </Switch>
