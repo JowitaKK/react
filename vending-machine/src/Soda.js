@@ -12,7 +12,7 @@ class Soda extends Component {
                 <Message>
                     <h1>Fanta is my favorite</h1>
                     <h3>But I need to swap it for water</h3>
-                    <link to= '/'> Go back</link>
+                    <Link to= '/'> Go back</Link>
                 </Message>
                 <img src={sodaImg} alt= 'fanta can' />
             </div>

@@ -27,7 +27,7 @@ class Chips extends Component {
             key= {i}
             src={chipsImg}
             className= 'bag'
-            style= {{ top: `${bag.y}px`, left `${bag.x}px`}}
+            style= {{ top: `${bag.y}px`, left: `${bag.x}px`}}
             alt= "bag of lays chips"
             />
         ));
