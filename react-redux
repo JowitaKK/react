@@ -1,0 +1,21 @@
+// Pure function   do not have database calls depends just on arrguments 
+function square(x) {
+    return x * x;
+}
+
+function squareAll(items) {  //do not override value of arrays
+    return items.map(square);
+}
+
+
+//Impure function 
+function square(x) {
+    updateXInDatabase(x);
+    return x * x;
+}
+
+function squareAll(items) {
+    for (let i = 0; i < items.length; i ++) {
+        items[i] = square(items[i]);
+    }
+}

@@ -42,4 +42,4 @@ class ShoppingList extends Component {
         );
       }
     }
-    export default ShoppingList;
+    export default ShoppingList
